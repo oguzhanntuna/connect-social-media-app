@@ -1,0 +1,21 @@
+.login-page {
+  height: 100vh;
+  position: relative;
+
+  .container {
+    max-width: 36rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-login,
+    &-signup {
+      border: 1px solid black;
+    }
+
+    &-login {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
