@@ -14,7 +14,7 @@ const Input: FC<InputProps> = ({ label, type, value, name, containerClassname, o
   const userEnteredValue = value.length > 0;
 
   return (
-    <div className={`${containerClassname ? containerClassname : ""}`}>
+    <div className={`${containerClassname ?? ""}`}>
       <label
         className={`${styles.label} ${userEnteredValue ? styles.hasValue : ""}`}
       >
