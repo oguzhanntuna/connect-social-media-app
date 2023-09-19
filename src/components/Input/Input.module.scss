@@ -1,0 +1,49 @@
+@import '/src/variables/variables.scss';
+
+.label {
+  position: relative;
+  display: flex;
+  flex: 1;
+
+  .labelText {
+    padding: 0 0.4rem;
+    position: absolute;
+    top: 50%;
+    left: 0.8rem;
+    transform: translateY(-50%);
+    line-height: 1;
+    background-color: white;
+  }
+
+  &:focus-within {
+    .labelText {
+      top: 0;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+    }
+  }
+
+  &:not(:focus-within) {
+    .labelText {
+      top: 50%;
+      transition: all 0.1s;
+    }
+  }
+
+  &.hasValue {
+    &.label:not(:focus-within) {
+      .labelText {
+        top: 0;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .input {
+    width: 100%;
+    padding: 1rem 1rem 0.8rem 1rem;
+    border-radius: 10rem;
+    outline: none;
+    font-size: 1.6rem;
+  }
+}
