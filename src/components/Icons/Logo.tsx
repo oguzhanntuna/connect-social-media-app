@@ -1,4 +1,4 @@
-const Logo = () => (
+export const Logo = () => (
   <svg width="460" height="125" viewBox="0 0 406 111">
     <g
       transform="matrix(1.0002232074206465,0,0,1.0002232074206465,-1.9573724467072822,7.51212200814048)"
@@ -33,5 +33,3 @@ const Logo = () => (
     </g>
   </svg>
 );
-
-export default Logo;

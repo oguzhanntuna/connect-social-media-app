@@ -1,15 +1,11 @@
 "use client";
 
-import React, { FC, useState } from "react";
-import Link from "next/link";
-
-import Logo from "@/components/Icons/Logo";
-import Input from "@/components/Input";
-import CallToActionButton from "@/components/CallToActionButton/CallToActionButton";
+import React, { useState } from "react";
+import { CallToActionButton, Input, Link, Logo } from "@/components";
 
 import styles from "./page.module.scss";
 
-const LoginPage: FC = () => {
+const LoginPage: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -37,7 +33,10 @@ const LoginPage: FC = () => {
               containerClassname={styles.passwordContainer}
               onChange={setPassword}
             />
-            <CallToActionButton className={styles.loginCta}>
+            <CallToActionButton
+              className={styles.loginCta}
+              onClick={() => console.log("login clicked!!")}
+            >
               Login
             </CallToActionButton>
           </div>
@@ -49,7 +48,7 @@ const LoginPage: FC = () => {
           <div className={styles.signupContainer}>
             <p>
               Don&apos;t have an account?{" "}
-              <Link className={styles.signupText} href="/signup">
+              <Link href="/signup" behaviour="nextLink">
                 Sign up
               </Link>
             </p>

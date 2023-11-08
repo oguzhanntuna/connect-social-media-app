@@ -1,5 +1,4 @@
 import styles from "./Input.module.scss";
-import { FC } from "react";
 
 interface InputProps {
   label: string;
@@ -10,7 +9,7 @@ interface InputProps {
   onChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Input: FC<InputProps> = ({ label, type, value, name, containerClassname, onChange }) => {
+export const Input: React.FC<InputProps> = ({ label, type, value, name, containerClassname, onChange }) => {
   const userEnteredValue = value.length > 0;
 
   return (
@@ -30,5 +29,3 @@ const Input: FC<InputProps> = ({ label, type, value, name, containerClassname, o
     </div>
   );
 };
-
-export default Input;
