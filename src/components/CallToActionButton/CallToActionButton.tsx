@@ -4,23 +4,32 @@ import styles from "./CallToActionButton.module.scss";
 
 type Category = "primary" | "accent";
 
+type ButtonType = "button" | "submit" | "reset";
+
 interface CallToActionButtonProps {
   children: ReactNode;
-  onClick: () => void;
+  type: ButtonType;
+  onClick?: () => void;
   category?: Category;
-  className?: string;
+  containerClassname?: string;
 }
 
 export const CallToActionButton: React.FC<CallToActionButtonProps> = ({
   children,
+  type,
   onClick,
-  category = 'primary',
-  className,
+  category = "primary",
+  containerClassname,
 }) => {
-
   return (
-    <button className={`${styles.button} ${className ?? ""} ${styles[category]}`} onClick={onClick}>
-      {children}
-    </button>
+    <div className={containerClassname}>
+      <button
+        className={`${styles.button} ${styles[category]}`}
+        type={type}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </div>
   );
 };

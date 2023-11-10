@@ -1,31 +1,28 @@
-@import '/src/variables/variables.scss';
+@import "@/variables/variables.scss";
 
 .button {
-    width: 100%;
-    padding: 0.8rem 1.6rem;
-    border: 1px solid transparent;
-    border-radius: 10rem;
-    color: $text-color--light;
-    font-weight: bold;
-    transition: background-color 0.2s;
-    cursor: pointer;
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 10rem;
+  color: $text-color--light;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  cursor: pointer;
 
-    &.primary {
-        background-color: $primary-color;
+  &.primary {
+    background-color: $primary-color;
 
-        &:hover {
-            background-color: rgba($primary-color, 0.85);
-            
-        }
+    &:hover {
+      background-color: rgba($primary-color, 0.85);
     }
+  }
 
-    &.accent {
-        background-color: $accent-color;
+  &.accent {
+    background-color: $accent-color;
 
-        &:hover {
-            background-color: rgba($accent-color, 0.85);
-            
-        }
+    &:hover {
+      background-color: rgba($accent-color, 0.85);
     }
+  }
 }
-

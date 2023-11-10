@@ -1,0 +1,1 @@
+export { SeparatorWithText } from "./SeparatorWithText";

@@ -1,4 +1,4 @@
-@import "/src/variables/variables.scss";
+@import "@/variables/variables.scss";
 
 .loginPage {
   height: 100vh;
@@ -30,39 +30,19 @@
         }
 
         .usernameContainer {
-          margin-bottom: 1.6rem;
+          margin-bottom: 1.8rem;
         }
 
         .passwordContainer { 
           margin-bottom: 2.4rem;
         }
 
-
         .usernameContainer,
         .passwordContainer,
         .loginCta 
         {
-          margin-left: 10rem;
-          margin-right: 10rem;
-        }
-
-        .loginCta {
-          width: calc(100% - 20rem);
-        }
-      }
-
-      .seperatorContainer {
-        display: flex;
-        align-items: center;
-        
-        .text {
-          margin: 0 1.6rem;
-        }
-
-        .line {
-          width: 100%;
-          height: 0.1rem;
-          background-color: black;
+          padding-left: 10rem;
+          padding-right: 10rem;
         }
       }
 

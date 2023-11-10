@@ -4,12 +4,18 @@ interface InputProps {
   label: string;
   type: "text" | "password";
   value: string;
-  name?: string;
   containerClassname?: string;
   onChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Input: React.FC<InputProps> = ({ label, type, value, name, containerClassname, onChange }) => {
+export const Input: React.FC<InputProps> = ({
+  label,
+  type,
+  value,
+  containerClassname,
+  onChange,
+}) => {
+  const inputName = label.toLowerCase().split(" ").join("-");
   const userEnteredValue = value.length > 0;
 
   return (
@@ -21,7 +27,7 @@ export const Input: React.FC<InputProps> = ({ label, type, value, name, containe
         <input
           className={styles.input}
           type={type}
-          name={name}
+          name={inputName}
           value={value}
           onChange={(event) => onChange(event.target.value)}
         />
